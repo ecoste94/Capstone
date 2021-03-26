@@ -5,34 +5,34 @@ General Assembly
 # Goals and Success Metrics of the of the Project:
 
 - Gaming is a massive industry (valued at c.$150bn -> 3x the size of the music and box office industries combined), which has drastically evolved, especially with the emergence of cloud computing
-  - Games are no longer played in the same way i.e. beginning/ ending then onto the next game
-  -	Games have now become living ecosystems where players meet socially, shop, attend virtual events, etc.
+   - Games are no longer played in the same way i.e. beginning/ ending then onto the next game
+   - Games have now become living ecosystems where players meet socially, shop, attend virtual events, etc.
 -	Data scientists have become instrumental in keeping modern games alive and healthy
 -	Successful analysis of player and gameplay data can help:
-    -	Create successful monetization strategies – this is especially a great concern for free-to-play games, where it is rare to have more than 5% of players paying for in-game products
-    -	Reduce player churn
-    -	Launch successful upgrades
-    - Even save a game, which has struggled to take off
+   - Create successful monetization strategies – this is especially a great concern for free-to-play games, where it is rare to have more than 5% of players paying for in-game products
+   - Reduce player churn
+   - Launch successful upgrades
+   - Even save a game, which has struggled to take off
 - Warzone has become one of the most popular F2P games in the world since its launch in March 2020
-  - It counts c.100m downloads and features Twitch’s top 10 overall most viewed
+   - It counts c.100m downloads and features Twitch’s top 10 overall most viewed
 -	As a result, I thought it would be interesting to analyze the gameplay and see if I could muster a greater understanding of why it has become so popular other than being a Call of Duty franchise?
-  -	Is there a strategy to win?
-  -	Is the winner predictable before the start?
+   - Is there a strategy to win?
+   - Is the winner predictable before the start?
 
 -	The main goal of this project was to obtain a better understanding of what factors beyond the obvious (i.e. survival time) have a strong say in a player’s chances of winning 
 -	I was particularly curious examine if:
-  -	Conclusive variables such as kills, player rank and deaths would be as telling as one might perceive
-  -	Niche variables like moving time, completing missions or choice of weapon have any influence in the final result
+     - Conclusive variables such as kills, player rank and deaths would be as telling as one might perceive
+     - Niche variables like moving time, completing missions or choice of weapon have any influence in the final result
 - All in all, a key goal was to be able to suggest some ‘winning strategy’ such as:
-   - Make sure to move
-   - Complete in-game side missions
-   - Avoid confrontation
-   - Use this combination of weapons 
+     - Make sure to move
+     - Complete in-game side missions
+     - Avoid confrontation
+     - Use this combination of weapons 
 -	A successful project was defined as:
-  -	Obtaining a dataset – this was deemed unlikely due to new privacy measures with regards to new default data privacy settings
-  -	Beating the baseline score
-  -	Being able to suggest some sort of success strategy
-  -	Spot areas for improvement / new potential modelling ideas
+    -	Obtaining a dataset – this was deemed unlikely due to new privacy measures with regards to new default data privacy settings
+    -	Beating the baseline score
+    -	Being able to suggest some sort of success strategy
+    -	Spot areas for improvement / new potential modelling ideas
 
 # Data Collection:
 
