@@ -9,10 +9,10 @@ General Assembly
   -	Games have now become living ecosystems where players meet socially, shop, attend virtual events, etc.
 -	Data scientists have become instrumental in keeping modern games alive and healthy
 -	Successful analysis of player and gameplay data can help:
-  -	Create successful monetization strategies – this is especially a great concern for free-to-play games, where it is rare to have more than 5% of players paying for in-game products
-  -	Reduce player churn
-  -	Launch successful upgrades
-  - Even save a game, which has struggled to take off
+    -	Create successful monetization strategies – this is especially a great concern for free-to-play games, where it is rare to have more than 5% of players paying for in-game products
+    -	Reduce player churn
+    -	Launch successful upgrades
+    - Even save a game, which has struggled to take off
 - Warzone has become one of the most popular F2P games in the world since its launch in March 2020
   - It counts c.100m downloads and features Twitch’s top 10 overall most viewed
 -	As a result, I thought it would be interesting to analyze the gameplay and see if I could muster a greater understanding of why it has become so popular other than being a Call of Duty franchise?
