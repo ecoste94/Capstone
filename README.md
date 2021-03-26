@@ -1,4 +1,4 @@
-# Capstone
+# Capstone - How to win Warzone?
 General Assembly
 
 
