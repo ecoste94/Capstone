@@ -4,36 +4,37 @@ General Assembly
 
 # Goals and Success Metrics of the of the Project:
 
-¥	Gaming is a massive industry (valued at c.$150bn -> 3x the size of the music and box office industries combined), which has drastically evolved, especially with the emergence of cloud computing
-¥	Games are no longer played in the same way i.e. beginning/ ending then onto the next game
-¥	Games have now become living ecosystems where players meet socially, shop, attend virtual events, etc.
-¥	Data scientists have become instrumental in keeping modern games alive and healthy
-¥	Successful analysis of player and gameplay data can help:
-¥	Create successful monetization strategies – this is especially a great concern for free-to-play games, where it is rare to have more than 5% of players paying for in-game products
-¥	Reduce player churn
-¥	Launch successful upgrades
-¥	Even save a game, which has struggled to take off
-¥	Warzone has become one of the most popular F2P games in the world since its launch in March 2020
-¥	It counts c.100m downloads and features Twitch’s top 10 overall most viewed
-¥	As a result, I thought it would be interesting to analyze the gameplay and see if I could muster a greater understanding of why it has become so popular other than being a Call of Duty franchise?
-¥	Is there a strategy to win?
-¥	Is the winner predictable before the start?
+- Gaming is a massive industry (valued at c.$150bn -> 3x the size of the music and box office industries combined), which has drastically evolved, especially with the emergence of cloud computing
+  - Games are no longer played in the same way i.e. beginning/ ending then onto the next game
+  -	Games have now become living ecosystems where players meet socially, shop, attend virtual events, etc.
+-	Data scientists have become instrumental in keeping modern games alive and healthy
+-	Successful analysis of player and gameplay data can help:
+  -	Create successful monetization strategies – this is especially a great concern for free-to-play games, where it is rare to have more than 5% of players paying for in-game products
+  -	Reduce player churn
+  -	Launch successful upgrades
+  - Even save a game, which has struggled to take off
+- Warzone has become one of the most popular F2P games in the world since its launch in March 2020
+  - It counts c.100m downloads and features Twitch’s top 10 overall most viewed
+-	As a result, I thought it would be interesting to analyze the gameplay and see if I could muster a greater understanding of why it has become so popular other than being a Call of Duty franchise?
+  -	Is there a strategy to win?
+  -	Is the winner predictable before the start?
 
-¥	The main goal of this project was to obtain a better understanding of what factors beyond the obvious (i.e. survival time) have a strong say in a player’s chances of winning 
-¥	I was particularly curious examine if:
-¥	Conclusive variables such as kills, player rank and deaths would be as telling as one might perceive
-¥	Niche variables like moving time, completing missions or choice of weapon have any influence in the final result
-¥	All in all, a key goal was to be able to suggest some ‘winning strategy’ such as:
-¥	Make sure to move
-¥	Complete in-game side missions
-¥	Avoid confrontation
-¥	Use this combination of weapons 
-¥	A successful project was defined as:
-¥	Obtaining a dataset – this was deemed unlikely due to new privacy measures with regards to new default data privacy settings
-¥	Beating the baseline score
-¥	Being able to suggest some sort of success strategy
-¥	Spot areas for improvement / new potential modelling ideas
-Data Collection:
+-	The main goal of this project was to obtain a better understanding of what factors beyond the obvious (i.e. survival time) have a strong say in a player’s chances of winning 
+-	I was particularly curious examine if:
+  -	Conclusive variables such as kills, player rank and deaths would be as telling as one might perceive
+  -	Niche variables like moving time, completing missions or choice of weapon have any influence in the final result
+  -	All in all, a key goal was to be able to suggest some ‘winning strategy’ such as:
+  -	Make sure to move
+  -	Complete in-game side missions
+  -	Avoid confrontation
+  -	Use this combination of weapons 
+-	A successful project was defined as:
+  -	Obtaining a dataset – this was deemed unlikely due to new privacy measures with regards to new default data privacy settings
+  -	Beating the baseline score
+  -	Being able to suggest some sort of success strategy
+  -	Spot areas for improvement / new potential modelling ideas
+
+# Data Collection:
 
 Acquiring the data was in itself the biggest challenge posed by this project. This is because Activison changed the default data privacy settings to private. As a result, accessing the in-game data of other players has now become impossible, unless players manually change their privacy settings to public on the Activision website. This means that classic APIs such as tracker.gg or RapidAPI have lost a lot in terms of practicality without a list of public gamer ids, which I am yet to find. 
 
@@ -74,4 +75,3 @@ Overall I am satisfied with the outcome of this project because most my goals we
 Unfortunately, the dataset was distorted and complicated to work with due to the extensive multicollinearity. As a result, even though regularization was applied and the scores were high the resulting coefficient strengths and direction were at times suspicious (i.e. damage taken or kills). I was also disappointed that the analysis by game mode did not reveal any feature differences or that the impact of weapon choice was mostly insignificant.
 
 Going forward it would be interesting to run this model with a more complete dataset and ideally obtain other gameplay stats, which are today private.
-![image](https://user-images.githubusercontent.com/61507763/112637067-ab1ac000-8e35-11eb-968c-cd12b4259428.png)
