@@ -23,11 +23,11 @@ General Assembly
 -	I was particularly curious examine if:
   -	Conclusive variables such as kills, player rank and deaths would be as telling as one might perceive
   -	Niche variables like moving time, completing missions or choice of weapon have any influence in the final result
-  -	All in all, a key goal was to be able to suggest some ‘winning strategy’ such as:
-  -	Make sure to move
-  -	Complete in-game side missions
-  -	Avoid confrontation
-  -	Use this combination of weapons 
+- All in all, a key goal was to be able to suggest some ‘winning strategy’ such as:
+   - Make sure to move
+   - Complete in-game side missions
+   - Avoid confrontation
+   - Use this combination of weapons 
 -	A successful project was defined as:
   -	Obtaining a dataset – this was deemed unlikely due to new privacy measures with regards to new default data privacy settings
   -	Beating the baseline score
