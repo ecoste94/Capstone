@@ -15,14 +15,14 @@ General Assembly
     - Even save a game, which has struggled to take off
 - Warzone has become one of the most popular F2P games in the world since its launch in March 2020
     - It counts c.100m downloads and features Twitch’s top 10 overall most viewed
--	As a result, I thought it would be interesting to analyze the gameplay and see if I could muster a greater understanding of why it has become so popular other than being a Call of Duty franchise?
+-	As a result, I thought it would be interesting to analyse the gameplay and see if I could muster a greater understanding of why it has become so popular other than being a Call of Duty franchise?
       - Is there a strategy to win?
       - Is the winner predictable before the start?
 
 -	The main goal of this project was to obtain a better understanding of what factors beyond the obvious (i.e. survival time) have a strong say in a player’s chances of winning 
 -	I was particularly curious examine if:
      - Conclusive variables such as kills, player rank and deaths would be as telling as one might perceive
-     - Niche variables like moving time, completing missions or choice of weapon have any influence in the final result
+     - Niche variables like moving time, completing missions or choice of weapon have any influence on the final placement
 - All in all, a key goal was to be able to suggest some ‘winning strategy’ such as:
      - Make sure to move
      - Complete in-game side missions
@@ -36,18 +36,18 @@ General Assembly
 
 # Data Collection:
 
-Acquiring the data was in itself the biggest challenge posed by this project. This is because Activison changed the default data privacy settings to private. As a result, accessing the in-game data of other players has now become impossible, unless players manually change their privacy settings to public on the Activision website. This means that classic APIs such as tracker.gg or RapidAPI have lost a lot in terms of practicality without a list of public gamer ids, which I am yet to find. 
+Acquiring the data was the biggest challenge posed by this project. This is because Activison changed the default data privacy settings to private. As a result, accessing the in-game data of other players has now become impossible, unless players manually change their privacy settings to public on the Activision website. This means that classic APIs such as tracker.gg or RapidAPI have lost a lot in terms of practicality without a list of public gamer ids, which I am yet to find. 
 
 After initial research, Alexandre le Corre's Warzone API available on RapidAPI was the best option. However, it has two limitations. The first is that without access to a list of 'public' gamer ids the only available data for download is 'Leaderboard'. Unfortunately, this data is not very exciting containing 16 variables such as: Prestige, XP, Time Played, Wins, Losses, Killstreaks, etc. The second problem is that being a Freemium API, I was limited to 500 rows of data a day.
 
-I also came across an API developed by iShot, which was available on Postman. Even though the privacy constraint still existed this API has access to a wealth of public data (79 columns) such as: Missions Completed, Player Stats, Weapons etc. as long as one can provide match ids. By chance, browsing through the API's discussion on Discord I found a pdf file posted by Caedrius with a list of 1000 match ids (each match contains data on c.150 players) in which he played. Even though I was ideally looking for a list of random ids belonging to a range of players, this was the best I could find and would provide more than enough data to explore my question.
+I also came across an API developed by iShot, which was available on Postman. Even though the privacy constraint still existed this API has access to a wealth of public data (79 columns) such as: Missions Completed, Player Stats, Weapons etc. if one can provide match ids. By chance, browsing through the API's discussion on Discord I found a pdf file posted by Caedrius with a list of 1000 match ids (each match contains data on c.150 players) in which he played. Even though I was ideally looking for a list of random ids belonging to a range of players, this was the best I could find and would provide more than enough data to explore my question.
 
 So, once I managed to convert the pdf into a JSON, I adapted the Postman API from the platform so that I could collect the data from all the match ids in one go. This is the exercise that has been carried out in this section.
 
 
 # Data Cleaning, EDA and Feature Engineering:
 
-Data cleaning was a lengthy process as the downloaded data was full of nested lists and dictionaries. Hence, all these lists and dictionaries had to be opened before concatenated into one large dataframe
+Data cleaning was a lengthy process as the downloaded data was full of nested lists and dictionaries. Hence, all these lists and dictionaries had to be opened before concatenated into one large data frame
 
 The data because it was sourced from a single player’s gameplay was full of outliers, imbalances and nulls. These all had to be curated for. A key factor that was observed via EDA was that the data set suffered from multicollinearity. The linking variable was time played. The longer a player plays the higher his ranking. For example, from the data when distance travelled was high, it did not represent a specific strategy it was more illustrative that the player had been alive for longer and therefore, finished well. So, it was important to create new ‘per minute’ variables that would mostly eliminate the importance of time played.
 
@@ -62,11 +62,11 @@ Random forest > Tensorflow > Adaboost (decision tree) > Logistic > KNN > Bayes
 
 Findings from the models:
 1) The CV scores range from 0.43 to 0.62 convincingly beating the baseline estimation!
-2) From the coefficients we can deduce that:
+2) From the coefficients, we can deduce that:
 •	A player, with a team, who moves a lot whilst completing missions is more likely to earn a higher ranked placement.
-•	Surprising features were the negative impact of kills in the logistic regression and the positive impact of damage taken. The relationship of kills could either be true (unlikely) or i.e multicollinearity within the data has distorted the coefficent strength/direction. Damage taken happens to have a strong relationship with distance travelled, which suggests a weakness in the data and that time played has not been completely eliminated from the variables (the longer the time played the more chances of getting hit).
-•	Another observations is that the weapon/perk choice seems to be insignificant with regards to the outcome of the game at first glance.
-3) The curves and matrices indicate that the models performs better in classifying the first and fifth classes but struggle with the middles classes (especially 2 and 3). This is not surprising as the distinction between the middle classes in the data is much more subtle. There are still a few outliers in the data helping the model differentiate the exterior classes.
+•	Surprising features were the negative impact of kills in the logistic regression and the positive impact of damage taken. The relationship of kills could either be true (unlikely) or i.e. multicollinearity within the data has distorted the coefficent strength/direction. Damage taken happens to have a strong relationship with distance travelled, which suggests a weakness in the data and that time played has not been eliminated from the variables (the longer the time played the more chances of getting hit).
+•	Another observation is that the weapon/perk choice seems to be insignificant with regards to the outcome of the game at first glance.
+3) The curves and matrices indicate that the models perform better in classifying the first and fifth classes but struggle with the middles classes (especially 2 and 3). This is not surprising as the distinction between the middle classes in the data is much subtler. There are still a few outliers in the data helping the model differentiate the exterior classes.
 
 # Conclusion and Evaluation:
 
